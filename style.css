@@ -1,0 +1,63 @@
+/* Simple responsive typography using CSS media queries */
+.responsive-title {
+  font-size: 1.75rem; /* base for small screens */
+}
+
+.responsive-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 576px) {
+  .responsive-title { font-size: 2rem; }
+  .responsive-paragraph { font-size: 1.05rem; }
+}
+
+@media (min-width: 768px) {
+  .responsive-title { font-size: 2.25rem; }
+  .responsive-paragraph { font-size: 1.1rem; }
+}
+
+@media (min-width: 992px) {
+  .responsive-title { font-size: 2.5rem; }
+  .responsive-paragraph { font-size: 1.125rem; }
+}
+
+@media (min-width: 1200px) {
+  .responsive-title { font-size: 2.75rem; }
+  .responsive-paragraph { font-size: 1.15rem; }
+}
+
+/* Task 2: CSS-only responsive card grid (no Bootstrap classes inside the grid) */
+.css-card-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 per row */
+  gap: 1rem;
+}
+
+.css-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+.css-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.css-card-body {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) { /* tablet: 2 per row */
+  .css-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) { /* desktop: 3 per row */
+  .css-card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+
